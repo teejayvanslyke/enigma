@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "enigma"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Key/secret authentication gem for your web services}
+    gem.description = %Q{Key/secret authentication gem for your web services}
     gem.email = "teejay.vanslyke@gmail.com"
     gem.homepage = "http://github.com/teejayvanslyke/enigma"
     gem.authors = ["teejayvanslyke"]
@@ -15,6 +15,8 @@ begin
     gem.add_development_dependency 'sinatra'
     gem.add_dependency 'rack'
     gem.add_dependency 'httparty'
+    gem.add_dependency 'addressable'
+    gem.add_dependency 'rest_client'
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
@@ -36,8 +38,8 @@ end
 
 task :default => :spec
 
-require 'rake/rdoctask'
-Rake::RDocTask.new do |rdoc|
+require 'rdoc/task'
+RDoc::Task.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'

@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'rack'
-require 'rack/test'
+require 'openssl'
 
 module Enigma
   SIGNATURE_HEADER  = "X_ENIGMA_SIGNATURE"
